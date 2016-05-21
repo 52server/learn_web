@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Learn slider</title>
+        <link rel="stylesheet" type="text/css" href="/static/nivo-slider/nivo-slider.css">
+        <link rel="stylesheet" type="text/css" href="/static/nivo-slider/themes/default/default.css">
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="/static/nivo-slider/jquery.nivo.slider.js"></script>
+
+        <script type="text/javascript">
+            $(window).load(function() {
+                $('#head_pic_slider').nivoSlider();
+            });
+        </script>
+
+        <style type="text/css">
+            .common-size {
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="common-size theme-default">
+            <div id="head_pic_slider" class="nivoSlider">
+                <img src="/static/images/moon.jpg" data-thumb="/static/images/moon.jpg">
+                <img src="/static/images/rime.jpg" data-thumb="/static/images/rime.jpg">
+                <img src="/static/images/road.jpg" data-thumb="/static/images/road.jpg">
+                <img src="/static/images/yellowflower.jpg" data-thumb="/static/images/yelloflower.jpg">
+            </div>
+            <div>Hello World</div>
+        </div>
+    <body>
+</html>
+
+{#
+vim:ft=jinja
+#}

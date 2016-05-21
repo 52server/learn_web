@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Learn carousel</title>
+        <script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="/static/bx_slider/jquery.bxslider.js"></script>
+
+        <link href="/static/bx_slider/jquery.bxslider.css" rel="stylesheet"/>
+
+        <style type="text/css">
+        </style>
+    </head>
+
+    <body>
+        <ul class="bxslider">
+            <li class="slide"><img src="/static/images/A.jpeg"></li>
+            <li class="slide"><img src="/static/images/g.png"></li>
+            <li class="slide"><img src="/static/images/moon.jpg"></li>
+            <li class="slide"><img src="/static/images/s_sleep.jpeg"></li>
+            <li class="slide"><img src="/static/images/sunflower.jpg"></li>
+            <li class="slide"><img src="/static/images/yellowflower.jpg"></li>
+            <li class="slide"><img src="/static/images/camera.jpeg"></li>
+            <li class="slide"><img src="/static/images/greatwall.jpg"></li>
+            <li class="slide"><img src="/static/images/rime.jpg"></li>
+            <li class="slide"><img src="/static/images/sky.jpg"></li>
+            <li class="slide"><img src="/static/images/sunset.jpg"></li>
+            <li class="slide"><img src="/static/images/circle.jpeg"></li>
+            <li class="slide"><img src="/static/images/hill.jpg"></li>
+            <li class="slide"><img src="/static/images/road.jpg"></li>
+            <li class="slide"><img src="/static/images/snowcappedmountain.jpg"></li>
+            <li class="slide"><img src="/static/images/waterfall.jpg"></li>
+        </ul>
+    <body>
+</html>
+
+<script>
+$(document).ready(function() {
+    $('.bxslider').bxSlider({
+        "mode": "horizontal", // vertical, fade
+
+
+        "pager": true,  /* 为false 则隐藏下面的分页导航。*/
+        "pagerType": "short",
+
+        "slideWidth": 240,
+        "minSlides": 2,
+        "maxSlides": 5,
+        "moveSlides": 1,    /* 每次移动的图片数目*/
+        "slideMargin": 3,
+
+        "auto": true,
+        "autoHover": true,
+        "pause": 1000,  /* 每次停顿的时间。*/
+    });
+});
+</script>
+
+{#
+vim:ft=jinja
+#}

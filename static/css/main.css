@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.comWidth{width:1000px; margin-left:auto; margin-right:auto;}
+.leftArea{float:left;}
+.rightArea{float:right;}
+
+/*topBar*/
+.topBar{height:31px; background-color:#f7f7f7}
+.topBar .leftArea{line-height:31px;}
+
+.fl{float: left;}
+.fr{float: right;}
+
+.logoBar{height: 80px; background-color: #00AAAA;}
+.logo{padding-top: 20px;}
+
+.searchBox{width: 430px; padding-top: 20px; padding-left: 185px;}
+.searchText{width: 360px; height: 35px;}
+.searchButton{width: 70px; height: 35px; background-color: #FF8C00; }
+
+.shopCar{width:145px; height:35px; background-color:#FF8C00; margin-top: 20px; font: 14px/35px "Microsoft YaHei", "微软雅黑"; color: #FFF;}
+.shopText{width:105px; height:100%; line-height:35px; border-right: #E27A00 solid 2px;}
+.shopNum{width:40px; height: 35px;}
