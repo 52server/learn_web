@@ -37,6 +37,12 @@ class LearnCarouselHandler(WebHandler):
         self.render("learn_carousel.html")
 
 
+@route("/learn/bootstrap")
+class LearnBootstrapHandler(WebHandler):
+    def get(self):
+        self.render("learn_bootstrap.html")
+
+
 @route("/learn/upload")
 class LearnUploadHandler(WebHandler):
     def post(self):

@@ -6,6 +6,8 @@
 #   Date    :   2016/05/03 08:10:23
 #   Desc    :
 #
+from __future__ import print_function
+
 import pprint
 import os.path
 
@@ -13,8 +15,12 @@ from tornado.log import gen_log
 from tornado.web import Application
 from tornado.ioloop import IOLoop
 from tornado.httpserver import HTTPServer
+from tornado.options import parse_command_line
 
 from core.manage import find_all_handlers
+
+HOST = "127.0.0.1"
+PORT = 8888
 
 
 def get_settings():
@@ -29,14 +35,24 @@ def get_settings():
 
 
 def main():
+    parse_command_line()
+
     handlers = find_all_handlers("handlers")
     settings = get_settings()
+
+    # Enable debug log.
+    # Tornado set the log level to INFO default.
+    if settings.get("debug", False):
+        gen_log.setLevel("DEBUG")
+
     pprint.pprint(handlers)
     pprint.pprint(settings)
+
     app = Application(handlers, **settings)
     server = HTTPServer(app)
-    server.bind(8888, "127.0.0.1")
-    gen_log.info(server)
+    server.bind(PORT, HOST)
+    print("Server run at " + HOST + ":" + str(PORT))
+
     server.start(1)
     IOLoop.current().start()
 
