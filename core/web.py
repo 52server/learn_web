@@ -6,6 +6,8 @@
 #   Date    :   2016/05/03 15:16:02
 #   Desc    :
 #
+import json
+
 import jinja2
 
 from tornado.web import RequestHandler
@@ -24,3 +26,7 @@ class WebHandler(RequestHandler):
         ns.update(**kwargs)
 
         return template.render(**ns)
+
+    def write_success(self, data):
+        data.update({"success": True})
+        self.write(json.dumps(data))

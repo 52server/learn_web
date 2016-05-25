@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Bootstrap</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+
+        <script type="text/javascript" src="/static/js/jquery-2.2.4.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="qrcode-data-form" action="/qrcode/create" method="POST" enctype="multipart/form-data" autocomplete="off">
+                        <div class="input-group">
+                            <span class="input-group-addon">输入数据</span>
+                            <input name="qr_data" type="text" class="form-control">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon">选择logo</span>
+                            <input type="file" name="logo" class="form-control">
+                        </div>
+                        <button id="qrcode-generate" class="btn btn-success form-control" align=center>Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="thumbnail" style="width: 330px; height:330px;">
+                        <img id="show-qrcode" alt="Hello World"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+$(function() {
+    $("#qrcode-generate").click(function(e) {
+        e.preventDefault();
+
+        var form = $("#qrcode-data-form");
+        var url = $("#qrcode-data-form").attr("action");
+        var formData = new FormData(form[0]);
+        var qrcodeShow = $("#show-qrcode");
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function(data) {
+                if(data.success) {
+                    qrcodeShow.attr("src", data.qr_path);
+                }
+            },
+            error: function(hdr, textStatus, err) {
+                alert(textStatus);
+            },
+        });
+    });
+});
+</script>
+{#
+vim:ft=jinja
+#}

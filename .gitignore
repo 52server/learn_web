@@ -60,3 +60,10 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+#Vim
+.ropeproject/
+tags
+
+#Others
+handlers/uploadpic/
