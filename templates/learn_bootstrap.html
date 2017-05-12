@@ -7,6 +7,52 @@
         <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
     </head>
     <body>
+        {#
+        <nav class="navbar navbar-default">
+        #}
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="navbar-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="padding-top: 5px;">
+                        <img src="/static/pic/logo.png" ></img>
+                    </a>
+                    <a class="navbar-brand">Brand</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <div class="navbar-form navbar-left">
+                        <input type="text" class="form-control" style="width: 400px;" placeholder="search for ...">
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                            Search
+                        </button>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://www.google.com">Link</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <span>Dropdown</span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a>Hello</a></li>
+                                <li><a>Hello</a></li>
+                                <li><a>Hello</a></li>
+                                <li><a>Hello</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
         <div class="col-lg-6">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="search for ...">

@@ -20,6 +20,7 @@ from tornado.options import parse_command_line
 from core.manage import find_all_handlers
 
 HOST = "127.0.0.1"
+# HOST = "192.168.1.100"
 PORT = 8888
 
 

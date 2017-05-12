@@ -9,7 +9,7 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" style="margin-top: 60px;">
                     <form id="qrcode-data-form" action="/qrcode/create" method="POST" enctype="multipart/form-data" autocomplete="off">
                         <div class="input-group">
                             <span class="input-group-addon">输入数据</span>
@@ -20,7 +20,7 @@
                             <span class="input-group-addon">选择logo</span>
                             <input type="file" name="logo" class="form-control">
                         </div>
-                        <button id="qrcode-generate" class="btn btn-success form-control" align=center>Submit</button>
+                        <button id="qrcode-generate" class="btn btn-success form-control" align=center>生成二维码</button>
                     </form>
                 </div>
                 <div class="col-md-6">

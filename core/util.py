@@ -28,7 +28,7 @@ def get_qr_code(data, **kwargs):
     qr.add_data(data)
     qr_image = qr.make_image()
     if im_name:
-        im = image_resize(im_name, 40)
+        im = image_resize(im_name, 60)
         x = qr_image.size[0]/2 - im.size[0]/2
         # If the modes don’t match, the pasted image is converted to the mode of
         # this image.
